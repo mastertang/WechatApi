@@ -1,0 +1,27 @@
+{
+  "name": "mastertang/wechatapi",
+  "description": "微信Api",
+  "keywords": [
+    "wechat",
+    "api",
+    "php"
+  ],
+  "time": "2019-12-13",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "WechatApi\\": "./"
+    }
+  },
+  "authors": [
+    {
+      "name": "RuiHua Tang",
+      "email": "547740900@qq.com",
+      "homepage": "https://github.com/mastertang/WechatApi",
+      "role": "Programmer"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.0"
+  }
+}

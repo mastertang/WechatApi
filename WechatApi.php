@@ -4,6 +4,7 @@ namespace WechatApi;
 
 use WechatApi\client\MiniClient;
 use WechatApi\client\CloudClient;
+use WechatApi\client\PayClient;
 use WechatApi\client\WebClient;
 
 /**
@@ -26,6 +27,11 @@ class WechatApi
      * @var CloudClient null 微信云客户端实例
      */
     public $wechatCloud = null;
+
+    /**
+     * @var PayClient null 支付客户端示例
+     */
+    public $wechatPay = null;
 
     /**
      * 选择微信网页客户端
@@ -64,6 +70,19 @@ class WechatApi
         }
         $this->wechatCloud = new CloudClient();
         return $this->wechatCloud;
+    }
+
+    /**
+     * 选择微信支付客户端
+     * @return PayClient null|PayClient
+     */
+    public function wechatPay()
+    {
+        if ($this->wechatPay instanceof PayClient) {
+            return $this->wechatPay;
+        }
+        $this->wechatPay = new PayClient();
+        return $this->wechatPay;
     }
 
 }

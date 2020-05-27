@@ -436,7 +436,7 @@ class WebJSDK
      */
     protected function accessTokenFilePath()
     {
-        return __DIR__ . "/../config/" . $this->appId . ".json";
+        return __DIR__ . "/../../config/" . $this->appId . ".json";
     }
 
     /**
@@ -446,6 +446,6 @@ class WebJSDK
      */
     protected function ticketFilePath()
     {
-        return __DIR__ . "/../config/" . $this->appId . "_ticket.json";
+        return __DIR__ . "/../../config/" . $this->appId . "_ticket.json";
     }
 }

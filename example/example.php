@@ -8,6 +8,7 @@ include "../src/miniDirver/MiniNormal.php";
 include "../src/webDirver/WebGA.php";
 include "../src/webDirver/WebJSDK.php";
 include "../src/webDirver/WebNA.php";
+include "../src/cloudDirver/Cos.php";
 
 $appId     = "";
 $appSecret = "";
@@ -167,5 +168,35 @@ $result = (new \WechatApi\WechatApi())
             "动态key" => "对应内容"
         ],
         "突出关键词"
+    );
+var_dump($result === false ? $errorMessage : $result);
+
+// 上传文件到cos
+$result = (new \WechatApi\WechatApi())
+    ->wechatCloud()
+    ->putObject(
+        $secretId,
+        $secretKey,
+        $region,
+        $bucket,
+        $key,
+        './a.txt',
+        "Hello world!",
+        "https",
+        $errorMessage
+    );
+var_dump($result === false ? $errorMessage : $result);
+
+// 删除cos上的文件
+$result = (new \WechatApi\WechatApi())
+    ->wechatCloud()
+    ->deleteObject(
+        $secretId,
+        $secretKey,
+        $region,
+        $bucket,
+        $key,
+        "https",
+        $errorMessage
     );
 var_dump($result === false ? $errorMessage : $result);

@@ -5,5 +5,8 @@
  
 ### 微信授权等api模块  v1.0.2
 
-1.添加cos上传和删除功能    
+1.添加cos上传和删除功能  
+
+国内腾讯Composer镜像
+composer config -g repos.packagist composer https://mirrors.tencent.com/composer/
  

@@ -5,7 +5,7 @@ namespace WechatApi\src\miniDirver;
 use WechatApi\src\Common;
 
 /**
- * Class MiniExtend
+ * Class sms
  * @package WechatApi\src\webDirver
  */
 class MiniExtend

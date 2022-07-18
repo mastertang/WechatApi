@@ -23,6 +23,6 @@
   ],
   "require": {
     "php": ">=5.6.0",
-    "tencentcloud/tencentcloud-sdk-php": "^3.0"
+    "qcloud/cos-sdk-v5": "^2.5"
   }
 }

@@ -5,8 +5,6 @@ namespace WechatApi\src\cloudDirver;
 use Qcloud\Cos\Client;
 use WechatApi\src\Common;
 
-require "cos-sdk-v5.phar/vendor/autoload.php";
-
 /**
  * Class Cos
  * @package WechatApi\src\webDirver
